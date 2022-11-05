@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #727264;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainNav {
+  width: 100%;
+  height: 68px;
+  background-color: white;
+}
+
+.mobileNav {
+  width: 100%;
+  padding-inline: 32px;
+  padding-block: 16px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+.mobileNav__items {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.subMobileNav {
+  width: 100%;
+  padding-inline: 32px;
+  padding-block: 16px;
+  position: relative;
+  top: 0px;
+  height: calc(100vh - 68px);
+  display: none;
+}
+
+.subMobileNav__Section,
+.search,
+.subMobileNav__subSection {
+  padding: 5px;
+  margin-block: 5px;
+}
+
+.subMobileNav__Section h3 {
+  cursor: pointer;
+}
+.subMobileNav__Section h3::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 32px;
+  background: url(../images/arrow.svg);
+}
+
+.search {
+  border: 1px solid #727264;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 95%;
+  background-color: transparent;
+}
+
+.navList {
+  padding-inline: 16px;
+  list-style: none;
+  border-left: 1px solid #f2f2f2;
+  display: none;
+}
+.navList li {
+  margin-block: 8px;
+}
+
+.showList {
+  display: block;
+}
+
+/*# sourceMappingURL=index.css.map */

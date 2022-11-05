@@ -1,0 +1,98 @@
+$backgroundColor: white;
+$basicColor: #727264;
+$LightGray: #f2f2f2;
+
+@mixin navDefault {
+  width: 100%;
+  padding-inline: 32px;
+  padding-block: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-size: 18px;
+  color: $basicColor;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainNav {
+  width: 100%;
+  height: 68px;
+  background-color: $backgroundColor;
+}
+.mobileNav {
+  @include navDefault;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $LightGray;
+}
+
+.mobileNav__items {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.subMobileNav {
+  @include navDefault;
+  position: relative;
+  top: 0px;
+  height: calc(100vh - 68px);
+  display: none;
+}
+
+.subMobileNav__Section,
+.search,
+.subMobileNav__subSection {
+  padding: 5px;
+  margin-block: 5px;
+}
+
+.subMobileNav__Section {
+  h3 {
+    cursor: pointer;
+  }
+  h3::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 32px;
+    background: url(../images/arrow.svg);
+  }
+}
+
+.search {
+  border: 1px solid $basicColor;
+  border-radius: 8px;
+  background-color: $LightGray;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 95%;
+  background-color: transparent;
+}
+
+.navList {
+  padding-inline: 16px;
+  list-style: none;
+  border-left: 1px solid $LightGray;
+  display: none;
+  li {
+    margin-block: 8px;
+  }
+}
+
+.showList {
+  display: block;
+}
