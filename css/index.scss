@@ -1,3 +1,5 @@
+@import "topContainer.scss";
+
 $backgroundColor: white;
 $basicColor: #727264;
 $LightGray: #f2f2f2;
@@ -13,7 +15,7 @@ $LightGray: #f2f2f2;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-size: 18px;
-  color: $basicColor;
+  color: #727264;
   margin: 0;
 }
 
@@ -25,15 +27,18 @@ body {
 .mainNav {
   width: 100%;
   height: 68px;
-  background-color: $backgroundColor;
+  background-color: white;
 }
+
 .mobileNav {
-  @include navDefault;
+  width: 100%;
+  padding-inline: 32px;
+  padding-block: 16px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid $LightGray;
+  border-bottom: 2px solid #f2f2f2;
 }
 
 .mobileNav__items {
@@ -42,11 +47,14 @@ body {
 }
 
 .subMobileNav {
-  @include navDefault;
+  width: 100%;
+  padding-inline: 32px;
+  padding-block: 16px;
   position: relative;
   top: 0px;
   height: calc(100vh - 68px);
   display: none;
+  background-color: #fff;
 }
 
 .subMobileNav__Section,
@@ -56,43 +64,50 @@ body {
   margin-block: 5px;
 }
 
-.subMobileNav__Section {
-  h3 {
-    cursor: pointer;
-  }
-  h3::after {
-    content: '';
-    width: 16px;
-    height: 16px;
-    position: absolute;
-    right: 32px;
-    background: url(../images/arrow.svg);
-  }
+.subMobileNav__Section h3 {
+  cursor: pointer;
+}
+
+.subMobileNav__Section h3::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 32px;
+  background: url(../images/arrow.svg);
 }
 
 .search {
-  border: 1px solid $basicColor;
+  border: 1px solid #727264;
   border-radius: 8px;
-  background-color: $LightGray;
+  background-color: #f2f2f2;
 }
 
 .searchInput {
   border: none;
   outline: none;
-  width: 95%;
+  width: 90%;
   background-color: transparent;
 }
 
 .navList {
   padding-inline: 16px;
   list-style: none;
-  border-left: 1px solid $LightGray;
+  border-left: 1px solid #f2f2f2;
   display: none;
-  li {
-    margin-block: 8px;
-  }
+}
+
+.navList li {
+  margin-block: 8px;
 }
 
 .showList {
   display: block;
 }
+
+/*# sourceMappingURL=index.scss.map */
+/*# sourceMappingURL=index.scss.map */
+/*# sourceMappingURL=index.scss.map */
+/*# sourceMappingURL=index.scss.map */
+
+/*# sourceMappingURL=index.scss.map */
