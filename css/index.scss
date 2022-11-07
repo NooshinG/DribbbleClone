@@ -1,5 +1,3 @@
-@import "topContainer.scss";
-
 $backgroundColor: white;
 $basicColor: #727264;
 $LightGray: #f2f2f2;
@@ -14,7 +12,7 @@ $LightGray: #f2f2f2;
   box-sizing: border-box;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   color: #727264;
   margin: 0;
 }
@@ -111,3 +109,4 @@ body {
 /*# sourceMappingURL=index.scss.map */
 
 /*# sourceMappingURL=index.scss.map */
+@import "topContainer.scss";

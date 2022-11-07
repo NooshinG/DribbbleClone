@@ -1,65 +1,7 @@
-.topContainer {
-  width: 100%;
-  height: 560px;
-  background-color: #000;
-  padding-block: 48px;
-}
-
-.topMenuContainer {
-  white-space: nowrap;
-  overflow-x: auto;
-}
-
-.topMenuContainer::-webkit-scrollbar {
-  display: none;
-}
-
-.topMenu {
-  list-style: none;
-  display: inline-flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.topMenu__Item {
-  display: inline-block;
-  padding: 16px;
-  color: #fff;
-  margin-inline: 8px;
-}
-
-.topMenu__Item:hover {
-  cursor: pointer;
-  color: #000;
-  background-color: #fff;
-  border-radius: 50px;
-}
-
-.mainTitle,
-.mainDescription {
-  text-align: center;
-  margin: 16px;
-  color: #fff;
-  line-height: 32px;
-}
-
-.mainTitle {
-  margin-block: 32px 16px;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 48px;
-}
-
-.topMenuSearch {
-  max-width: 90%;
-  margin: auto;
-}
-
 * {
   box-sizing: border-box;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   color: #727264;
   margin: 0;
 }
@@ -155,5 +97,88 @@ body {
 /*# sourceMappingURL=index.scss.map */
 /*# sourceMappingURL=index.scss.map */
 /*# sourceMappingURL=index.scss.map */
+.topContainer {
+  width: 100%;
+  height: 560px;
+  background-color: #000;
+  padding-block: 48px;
+}
+
+.topMenuContainer {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.topMenuContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.topMenu {
+  list-style: none;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.topMenu__Item {
+  display: inline-block;
+  padding: 16px;
+  color: #fff;
+  margin-inline: 8px;
+}
+
+.topMenu__Item:hover {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  border-radius: 50px;
+}
+
+.mainTitle,
+.mainDescription {
+  text-align: center;
+  color: #fff;
+}
+
+.mainDescription {
+  line-height: 24px;
+  max-width: 550px;
+  margin: 16px auto;
+}
+
+.mainTitle {
+  margin-block: 32px 16px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.topMenuSearch {
+  max-width: 90%;
+  margin: 48px auto;
+  padding: 16px;
+  border-radius: 50px;
+}
+
+.trendSearch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.treandSearch__item,
+.treandSearch__title {
+  margin: 8px;
+  color: #fff;
+}
+
+.treandSearch__item {
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 8px;
+}
 
 /*# sourceMappingURL=index.css.map */

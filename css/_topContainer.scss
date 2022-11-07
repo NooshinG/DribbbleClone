@@ -1,15 +1,17 @@
 $fontColor: #fff;
+$borderColor: #fff;
+
 .topContainer {
   width: 100%;
   height: 560px;
   background-color: #000;
   padding-block: 48px;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 }
 
 .topMenuContainer {
-  // display: flex;
-  // flex-wrap: nowrap;
-  // justify-content: center;
   white-space: nowrap;
   overflow-x: auto;
 }
@@ -43,19 +45,45 @@ $fontColor: #fff;
 .mainTitle,
 .mainDescription {
   text-align: center;
-  margin:16px;
   color: $fontColor;
-  line-height: 32px;
+}
+
+.mainDescription {
+  line-height: 24px;
+  max-width: 550px;
+  margin: 16px auto;
 }
 
 .mainTitle {
   margin-block: 32px 16px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
-  line-height: 48px;
+  line-height: 32px;
 }
 
-.topMenuSearch{
+.topMenuSearch {
   max-width: 90%;
-  margin:auto;
+  margin: 48px auto;
+  padding: 16px;
+  border-radius: 50px;
+}
+
+.trendSearch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.treandSearch__item,
+.treandSearch__title {
+  margin: 8px;
+  color: $fontColor;
+}
+
+.treandSearch__item {
+  border: 1px solid $borderColor;
+  border-radius: 50px;
+  padding: 8px;
 }
