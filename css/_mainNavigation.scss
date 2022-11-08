@@ -1,0 +1,126 @@
+.mainNav {
+  width: 100%;
+  height: 68px;
+  background-color: $backgroundColor;
+}
+
+.mobileNav,
+.desktopNav {
+  width: 100%;
+  padding-inline: 32px;
+  padding-block: 16px;
+  height: 100%;
+}
+
+.desktopNav {
+  display: none;
+}
+
+.mobileNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $LightGray;
+}
+
+.mobileNav__items {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.subMobileNav {
+  width: 100%;
+  padding-inline: 32px;
+  padding-block: 16px;
+  position: relative;
+  top: 0px;
+  height: calc(100vh - 68px);
+  display: none;
+  background-color: $backgroundColor;
+}
+
+.subMobileNav__Section,
+.search,
+.subMobileNav__subSection {
+  padding: 5px;
+  margin-block: 5px;
+}
+
+.subMobileNav__Section h3 {
+  cursor: pointer;
+}
+
+.subMobileNav__Section h3::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 32px;
+  background: url(../images/arrow.svg);
+}
+
+.search {
+  border: 1px solid $basicColor;
+  border-radius: 8px;
+  background-color: $LightGray;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 90%;
+  background-color: transparent;
+}
+
+.navList {
+  padding-inline: 16px;
+  list-style: none;
+  border-left: 1px solid $LightGray;
+  display: none;
+}
+
+.navList li {
+  margin-block: 8px;
+}
+
+.showList {
+  display: block;
+}
+
+@media screen and (min-width: 980px) {
+  .mobileNav {
+    display: none;
+  }
+
+  .desktopNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .rightSection,
+  .leftSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navLink {
+    margin-inline: 8px;
+    font-weight: bold;
+  }
+  .logo {
+    margin-right: 8px;
+  }
+
+  .signIn{
+    font-weight: normal;
+  }
+
+  .signUp{
+    border-radius: 10px;
+    background-color: $signUp;
+    color: $fontColor;
+    padding: 12px 16px;
+  }
+}

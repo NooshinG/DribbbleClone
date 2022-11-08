@@ -1,10 +1,8 @@
-$fontColor: #fff;
-$borderColor: #fff;
 
 .topContainer {
   width: 100%;
   height: 560px;
-  background-color: #000;
+  background-color: $containerBackgroundColor;
   padding-block: 48px;
   // display: flex;
   // flex-direction: column;
@@ -37,8 +35,8 @@ $borderColor: #fff;
 
 .topMenu__Item:hover {
   cursor: pointer;
-  color: #000;
-  background-color: #fff;
+  color: $secondFontColor;
+  background-color: $backgroundColor;
   border-radius: 50px;
 }
 
