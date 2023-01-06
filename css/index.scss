@@ -1,29 +1,65 @@
-@import "colors.scss";
-
-@mixin navDefault {
-  width: 100%;
-  padding-inline: 32px;
-  padding-block: 16px;
-}
+@import "colors";
 
 * {
   box-sizing: border-box;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   color: $basicColor;
   margin: 0;
 }
 
-body {
-  width: 100vw;
-  height: 100vh;
+.list {
+  list-style: none;
+  padding: 0;
 }
 
-a {
-  text-decoration: none;
+.list-item {
+  display: inline-block;
+  font-weight: 700;
 }
 
+.list-item-mobile::after{
+  content: '';
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 24px;
+  background-image: url('../images/arrow.svg');
+  z-index: 10;
+}
 
-@import "mainNavigation.scss";
-@import "topContainer.scss";
+.list-item-inner{  
+  width: 100%;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+a,
+.list-item {
+  cursor: pointer;
+}
+
+.link-red {
+  padding: 10px;
+  background-color: #ea4c89;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+}
+
+@import "topNav";
+@import "searchSection";
+
+@media (min-width: 920px) {
+  .only-mobile {
+    display: none;
+  }
+}
+
+@media (width< 920px) {
+  .only-desktop {
+    display: none;
+  }
+
+}

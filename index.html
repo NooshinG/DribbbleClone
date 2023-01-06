@@ -12,110 +12,53 @@
   </head>
   <body>
     <header>
-      <nav class="mainNav">
-        <div class="desktopNav">
-          <div class="rightSection">
-            <img src="images/dribbble.svg" class="logo"/>
-            <a href="#" class="navLink">Inspiration</a>
-            <a href="#" class="navLink">Find Work</a>
-            <a href="#" class="navLink">Learn Design</a>
-            <a href="#" class="navLink">Go Pro</a>
-            <a href="#" class="navLink">Design Files</a>
-            <a href="#" class="navLink">Hire Designers</a>
-          </div>
-          <div class="leftSection">
-            <a href="#" class="navLink"><img src="images/magnifier.svg" /></a>
-            <a href="#" class="navLink signIn">Sign in</a>
-            <a href="#" class="navLink signUp">Sign up</a>
-          </div>
+      
+      <nav class="top-nav flex-space-between">
+        <div class="nav-toggle only-mobile">
+          <a><img src="./images/burgur.svg" /></a>
         </div>
-        <div class="mobileNav">
-          <div class="mobileNav__items BurgerMenu">
-            <img src="images/burgur.svg" />
-          </div>
-          <div class="mobileNav__items">
-            <img src="images/dribbble.svg" />
-          </div>
-          <div class="mobileNav__items">Sign in</div>
+        <div class="nav-items">
+          <a><img src="./images/dribbble.svg" class="logo" /></a>
+          <ul class="list only-desktop nav-items">
+            <li class="list-item">Inspiration</li>
+            <li class="list-item">Find Work</li>
+            <li class="list-item">Learn Design</li>
+            <li class="list-item">Go Pro</li>
+            <li class="list-item">Design Files</li>
+            <li class="list-item">Hire Designers</li>
+          </ul>
         </div>
-        <div class="subMobileNav">
-          <div class="search">
-            <img src="images/magnifier.svg" />
-            <input type="text" placeholder="Serach" class="searchInput" />
-          </div>
-          <div class="subMobileNav__Section">
-            <div class="subMobileNav__subSection">
-              <h3 id="s1">Section1</h3>
-              <ul class="navList">
-                <li>Item1</li>
-                <li>Item2</li>
-              </ul>
-            </div>
-            <div class="subMobileNav__subSection">
-              <h3 id="s2">Section2</h3>
-              <ul class="navList">
-                <li>Item3</li>
-                <li>Item4</li>
-              </ul>
-            </div>
-          </div>
+        <div class="nav-items">
+          <a class="only-desktop"><img src="./images/magnifier.svg" /></a>
+          <a class="text-normal">Sign in</a>
+          <a class="only-desktop link-red">Sign Up</a>
         </div>
       </nav>
-    </header>
-    <section class="topContainer">
-      <div class="topMenuContainer">
-        <li class="topMenu">
-          <ul class="topMenu__Item">
-            Discover
-          </ul>
-          <ul class="topMenu__Item">
-            Animation
-          </ul>
-          <ul class="topMenu__Item">
-            Branding
-          </ul>
-          <ul class="topMenu__Item">
-            Illustration
-          </ul>
-          <ul class="topMenu__Item">
-            Mobile
-          </ul>
-          <ul class="topMenu__Item">
-            Print
-          </ul>
-          <ul class="topMenu__Item">
-            Product Design
-          </ul>
-          <ul class="topMenu__Item">
-            Typography
-          </ul>
-          <ul class="topMenu__Item">
-            Web Design
-          </ul>
+      <div class="empty"></div>
+      <ul
+        class="list nav-list-mobile nav-container-mobile "
+      >
+        <li class="list-item search-container">
+          <img src="./images/magnifier.svg" />
+          <input class="search-input" type="text" placeholder="Search" />
         </li>
-      </div>
-      <p class="mainTitle">
-        Explore the world’s leading <br />
-        design portfolios
-      </p>
-      <p class="mainDescription">
-        Millions of designers and agencies around the world showcase their
-        portfolio work on Dribbble - the home to the world’s best design and
-        creative professionals.
-      </p>
-      <div class="search topMenuSearch">
-        <img src="images/magnifier.svg" />
-        <input type="text" placeholder="Serach" class="searchInput" />
-      </div>
-      <div class="trendSearch">
-        <span class="treandSearch__title">Trending searches</span>
-        <span class="treandSearch__item">landing page</span>
-        <span class="treandSearch__item">ios</span>
-        <span class="treandSearch__item">food</span>
-        <span class="treandSearch__item">landingpage</span>
-        <span class="treandSearch__item">uxdesign</span>
-        <span class="treandSearch__item">app design</span>
-      </div>
-    </section>
+        <li class="list-item list-item-mobile">
+          Inspiration
+          <!-- <ul class="list nav-list-mobile nav-list-inner">
+            <li class="list-item-inner">Explore Design Work</li>
+            <li class="list-item-inner">New & Noteworthy</li>
+            <li class="list-item-inner">Playoffs</li>
+            <li class="list-item-inner">Blog</li>
+            <li class="list-item-inner">Weekly Warmup</li>
+          </ul> -->
+        </li>
+        <li class="list-item">Find Work</li>
+        <li class="list-item">Learn Design</li>
+        <li class="list-item">Go Pro</li>
+        <li class="list-item">Design Files</li>
+        <li class="list-item">Hire Designers</li>
+      </ul>
+    </header>
+    <!-- <section class="search-section"></section> -->
   </body>
 </html>
