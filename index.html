@@ -12,10 +12,9 @@
   </head>
   <body>
     <header>
-      
       <nav class="top-nav flex-space-between">
         <div class="nav-toggle only-mobile">
-          <a><img src="./images/burgur.svg" /></a>
+          <a><img data-showList="0" src="./images/burger.svg" /></a>
         </div>
         <div class="nav-items">
           <a><img src="./images/dribbble.svg" class="logo" /></a>
@@ -35,28 +34,68 @@
         </div>
       </nav>
       <div class="empty"></div>
-      <ul
-        class="list nav-list-mobile nav-container-mobile "
-      >
-        <li class="list-item search-container">
+      <ul class="list nav-list-mobile nav-container-mobile only-mobile hidden">
+        <li class="list-item list-item-mobile search-container">
           <img src="./images/magnifier.svg" />
           <input class="search-input" type="text" placeholder="Search" />
         </li>
         <li class="list-item list-item-mobile">
-          Inspiration
-          <!-- <ul class="list nav-list-mobile nav-list-inner">
+          <h3 data-showList="0">Inspiration</h3>
+          <ul class="list nav-list-mobile nav-list-inner hidden">
             <li class="list-item-inner">Explore Design Work</li>
             <li class="list-item-inner">New & Noteworthy</li>
             <li class="list-item-inner">Playoffs</li>
             <li class="list-item-inner">Blog</li>
             <li class="list-item-inner">Weekly Warmup</li>
-          </ul> -->
+          </ul>
         </li>
-        <li class="list-item">Find Work</li>
-        <li class="list-item">Learn Design</li>
-        <li class="list-item">Go Pro</li>
-        <li class="list-item">Design Files</li>
-        <li class="list-item">Hire Designers</li>
+        <li class="list-item list-item-mobile">
+          <h3 data-showList="0">Find Work</h3>
+          <ul class="list nav-list-mobile nav-list-inner hidden">
+            <li class="list-item-inner">Job Board</li>
+            <li class="list-item-inner">Freelance Projects</li>
+            <li class="list-item-inner">Want freelance design projects?</li>
+            <li class="list-item-inner">Personalize your profile with video</li>
+          </ul>
+        </li>
+        <li class="list-item list-item-mobile">
+          <h3 data-showList="0">Learn Design</h3>
+          <ul class="list nav-list-mobile nav-list-inner hidden">
+            <li class="list-item-inner">Certified Product Design Course</li>
+            <li class="list-item-inner">Introduction to UI Design</li>
+            <li class="list-item-inner">Browse our courses & workshops</li>
+          </ul>
+        </li>
+        <li class="list-item list-item-mobile">
+          <h3 data-showList="0">Go Pro</h3>
+          <ul class="list nav-list-mobile nav-list-inner hidden">
+            <li class="list-item-inner">For Designers</li>
+            <li class="list-item-inner">For Freelancers</li>
+            <li class="list-item-inner">For Teams</li>
+          </ul>
+          </li>
+        <li class="list-item list-item-mobile">
+          <h3 data-showList="0">Design Files</h3>
+          <ul class="list nav-list-mobile nav-list-inner hidden">
+            <li class="list-item-inner">Discover</li>
+            <li class="list-item-inner">Graphics</li>
+            <li class="list-item-inner">Fonts</li>
+            <li class="list-item-inner">3D</li>
+            <li class="list-item-inner">Templates</li>
+            <li class="list-item-inner">Add-Ons</li>
+            <li class="list-item-inner">Web Themes</li>
+            <li class="list-item-inner">Open a Shop</li>
+          </ul>
+          </li>
+        <li class="list-item list-item-mobile">
+          <h3 data-showList="0">Hire Designers</h3>
+          <ul class="list nav-list-mobile nav-list-inner hidden">
+            <li class="list-item-inner">About Dribbble Hiring</li>
+            <li class="list-item-inner">Designer Search</li>
+            <li class="list-item-inner">List my Job Opening</li>
+            <li class="list-item-inner">Post a Freelance Project</li>
+          </ul>
+          </li>
       </ul>
     </header>
     <!-- <section class="search-section"></section> -->

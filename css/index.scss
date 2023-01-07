@@ -1,3 +1,4 @@
+root{--arrow-image-up : url('../images/arrow-down.svg');}
 @import "colors";
 
 * {
@@ -19,14 +20,20 @@
   font-weight: 700;
 }
 
-.list-item-mobile::after{
+.list-item-mobile{
+  width: 100%;
+}
+.list-item-mobile h3{
+line-height: 2rem;
+}
+
+.list-item-mobile h3::after{
   content: '';
   width: 16px;
   height: 16px;
   position: absolute;
   right: 24px;
-  background-image: url('../images/arrow.svg');
-  z-index: 10;
+  background-image: var(--arrow-image-up,url('../images/arrow-down.svg'));
 }
 
 .list-item-inner{  
