@@ -1,4 +1,6 @@
-root{--arrow-image-up : url('../images/arrow-down.svg');}
+root {
+  --arrow-image-up: url("../images/arrow-down.svg");
+}
 @import "colors";
 
 * {
@@ -17,28 +19,30 @@ root{--arrow-image-up : url('../images/arrow-down.svg');}
 
 .list-item {
   display: inline-block;
-  font-weight: 700;
 }
 
-.list-item-mobile{
+.list-item:hover{
+  color: #000;
+}
+
+.list-item-mobile {
   width: 100%;
 }
-.list-item-mobile h3{
-line-height: 2rem;
+.list-item-mobile h3 {
+  line-height: 2rem;
 }
 
-.list-item-mobile h3::after{
-  content: '';
+.list-item-mobile h3::after {
+  content: "";
   width: 16px;
   height: 16px;
   position: absolute;
   right: 24px;
-  background-image: var(--arrow-image-up,url('../images/arrow-down.svg'));
+  background-image: var(--arrow-image-up, url("../images/arrow-down.svg"));
 }
 
-.list-item-inner{  
+.list-item-inner {
   width: 100%;
-  font-weight: normal;
   cursor: pointer;
 }
 
@@ -52,7 +56,6 @@ a,
   background-color: #ea4c89;
   border-radius: 5px;
   color: #fff;
-  font-weight: 700;
 }
 
 @import "topNav";
@@ -68,5 +71,4 @@ a,
   .only-desktop {
     display: none;
   }
-
 }

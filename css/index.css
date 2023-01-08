@@ -17,7 +17,10 @@ root {
 
 .list-item {
   display: inline-block;
-  font-weight: 700;
+}
+
+.list-item:hover {
+  color: #000;
 }
 
 .list-item-mobile {
@@ -39,7 +42,6 @@ root {
 
 .list-item-inner {
   width: 100%;
-  font-weight: normal;
   cursor: pointer;
 }
 
@@ -53,7 +55,6 @@ a,
   background-color: #ea4c89;
   border-radius: 5px;
   color: #fff;
-  font-weight: 700;
 }
 
 .empty {
@@ -150,14 +151,58 @@ a,
   display: none;
 }
 
+.sub-menu-desktop {
+  position: absolute;
+  top: 70px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px -24px 16px -8px #f2f2f2;
+}
+
+.sub-menu-desktop ul {
+  width: 200px;
+  background-color: #f2f2f2;
+  padding-block: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sub-menu-desktop ul:first-child {
+  width: 400px;
+  background-color: #fff;
+  padding-block: 16px;
+}
+
+.sub-menu-items {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-inline: 22px;
+}
+
+.sub-menu-icon {
+  width: 24px;
+  aspect-ratio: 1;
+  border-radius: 3px;
+}
+
+.sub-menu-icon-purple {
+  background-color: rgba(114, 78, 145, 0.1);
+}
+
+.sub-menu-items:hover .sub-menu-icon {
+  background-color: rgba(114, 78, 145, 0.2);
+}
+
 .search-section {
   width: 100%;
-  height: 860px;
+  height: 400px;
   background-color: black;
-  position: relative;
-  top: 80px;
-  left: 0;
-  z-index: 0;
 }
 
 @media (min-width: 920px) {
