@@ -106,7 +106,7 @@
 .sub-menu-desktop ul {
   width: 200px;
   background-color: #f2f2f2;
-  padding-block: 24px;
+  padding-block: 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -115,7 +115,8 @@
 .sub-menu-desktop ul:first-child {
   width: 400px;
   background-color: #fff;
-  padding-block: 16px;
+  padding-block: 8px;
+  gap:0;
 }
 
 .sub-menu-items {
@@ -127,15 +128,32 @@
 }
 
 .sub-menu-icon{
-  width: 24px;
+  width: 32px;
   aspect-ratio: 1;
   border-radius: 3px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sub-menu-icon-purple{
-  background-color: rgba(114, 78, 145,0.1);  
+  --rgb:114, 78, 145;
+  --alpha:  0.1;
+  background-color: rgba(var(--rgb), var(--alpha));
 }
 
-.sub-menu-items:hover .sub-menu-icon{
-  background-color: rgba(114, 78, 145,0.2);
+.sub-menu-items:hover .sub-menu-icon-purple{
+  --alpha:0.2;
 }
+
+.sub-menu-items p{
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.sub-menu-items h3{
+  font-size: .9rem;
+  font-weight: normal;
+  color: #000;
+}
+
