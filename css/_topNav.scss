@@ -1,24 +1,33 @@
-.empty {
-  width: 100%;
-  height: 80px;
-  margin: 0;
-  background-color: transparent;
+@mixin flex($alignVal, $justifyVal, $flexDir: row, $gapVal: 0) {
+  display: flex;
+  flex-direction: $flexDir;
+  align-items: $alignVal;
+  justify-content: $justifyVal;
+  @if $gapVal != 0 {
+    gap: $gapVal;
+  }
 }
 
+.empty,
 .top-nav {
   width: 100%;
   height: 80px;
   margin: 0;
+}
+
+.empty {
+  background-color: transparent;
+}
+
+.top-nav {
   padding: 0 24px;
   position: fixed;
   z-index: 999;
-  background-color: #fff;
+  background-color: $white;
 }
 
 .flex-space-between {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(center, space-between);
 }
 
 .nav-toggle {
@@ -39,10 +48,7 @@
 }
 
 .nav-items {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 10px;
+  @include flex(center, space-evenly, row, 10px);
 }
 
 .search-input {
@@ -58,34 +64,30 @@
 .search-container {
   padding: 8px;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: $LightGray;
 }
 
 .search-container:focus-within {
-  border: 1px Solid #ea4c89;
+  border: 1px Solid $pink;
   box-shadow: 0px 0px 2px 3px hsl(337, 79%, 95%);
   background-color: transparent;
 }
 
 .nav-list-mobile {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 24px;
+  @include flex(flex-start, flex-start, column, 24px);
 }
 
 .nav-container-mobile {
   width: 100%;
   min-height: calc(100vh - 80px);
-  background-color: #fff;
-  border-top: 1px Solid #f2f2f2;
+  background-color: $white;
+  border-top: 1px Solid $LightGray;
   padding: 24px;
 }
 
 .nav-list-inner {
   padding: 24px 40px;
-  border-left: 1px solid #f2f2f2;
+  border-left: 1px solid $LightGray;
 }
 
 .hidden {
@@ -95,65 +97,69 @@
 .sub-menu-desktop {
   position: absolute;
   top: 70px;
-  display: flex;
-  align-items: center;
+  @include flex(center, center);
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0px -24px 16px -8px #f2f2f2;
+  background-color: $white;
+  box-shadow: 0px -24px 16px -8px $LightGray;
 }
 
 .sub-menu-desktop ul {
   width: 200px;
-  background-color: #f2f2f2;
+  background-color: $LightGray;
   padding-block: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  @include flex(flex-start, center, column, 16px);
 }
 
 .sub-menu-desktop ul:first-child {
   width: 400px;
-  background-color: #fff;
+  background-color: $white;
   padding-block: 8px;
-  gap:0;
+  gap: 0;
 }
 
 .sub-menu-items {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  @include flex(center, center, row, 16px);
   padding: 16px;
   margin-inline: 22px;
 }
 
-.sub-menu-icon{
+.sub-menu-icon {
   width: 32px;
   aspect-ratio: 1;
-  border-radius: 3px;  
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: 3px;
+  @include flex(center, center);
 }
 
-.sub-menu-icon-purple{
-  --rgb:114, 78, 145;
-  --alpha:  0.1;
-  background-color: rgba(var(--rgb), var(--alpha));
+@mixin hoverSubMenu($hoverSelector...) {
+  $parent : ".sub-menu-items:hover ";
+  @for $i from 0 to length($hoverSelector){
+    #{$parent nth($hoverSelector,$i+1)}{
+      background: rgba($hoverSelector, 0.2);
+    }
+  }
 }
 
-.sub-menu-items:hover .sub-menu-icon-purple{
-  --alpha:0.2;
+.sub-menu-icon-purple {
+  $rgb: $purple;
+  $alpha: 0.1;
+  background: rgba($rgb, $alpha);
+  // @include hoverSubMenu(
+  //   $rgb,
+  //   0.2,
+  //   ".sub-menu-items:hover .sub-menu-icon-purple"
+  // );
 }
 
-.sub-menu-items p{
+
+
+.sub-menu-items p {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
 
-.sub-menu-items h3{
-  font-size: .9rem;
+.sub-menu-items h3 {
+  font-size: 0.9rem;
   font-weight: normal;
-  color: #000;
+  color: $black;
 }
-

@@ -57,17 +57,18 @@ a,
   color: #fff;
 }
 
-.empty {
-  width: 100%;
-  height: 80px;
-  margin: 0;
-  background-color: transparent;
-}
-
+.empty,
 .top-nav {
   width: 100%;
   height: 80px;
   margin: 0;
+}
+
+.empty {
+  background-color: transparent;
+}
+
+.top-nav {
   padding: 0 24px;
   position: fixed;
   z-index: 999;
@@ -76,6 +77,7 @@ a,
 
 .flex-space-between {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
@@ -99,6 +101,7 @@ a,
 
 .nav-items {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   gap: 10px;
@@ -155,7 +158,9 @@ a,
   position: absolute;
   top: 70px;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
@@ -168,6 +173,8 @@ a,
   padding-block: 32px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -180,7 +187,9 @@ a,
 
 .sub-menu-items {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   padding: 16px;
   margin-inline: 22px;
@@ -191,18 +200,13 @@ a,
   aspect-ratio: 1;
   border-radius: 3px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
 .sub-menu-icon-purple {
-  --rgb:114, 78, 145;
-  --alpha: 0.1;
-  background-color: rgba(var(--rgb), var(--alpha));
-}
-
-.sub-menu-items:hover .sub-menu-icon-purple {
-  --alpha:0.2;
+  background: rgba(114, 78, 145, 0.1);
 }
 
 .sub-menu-items p {
