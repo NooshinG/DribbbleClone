@@ -15,6 +15,10 @@ root {
   padding: 0;
 }
 
+.list-desktop > li {
+  padding-block: 30px;
+}
+
 .list-item {
   display: inline-block;
 }
@@ -164,13 +168,32 @@ a,
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
-  box-shadow: 0px -24px 16px -8px #f2f2f2;
+  box-shadow: 0px -16px 32px -8px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 
-.sub-menu-desktop ul {
+.only-desktop .list-item:hover .sub-menu-desktop {
+  display: flex;
+}
+
+.sub-menu-desktop .sub-menu-section-desktop {
+  width: 400px;
+  background-color: #fff;
+  padding-block: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sub-menu-section-desktop li {
+  width: 100%;
+}
+
+.sub-menu-desktop .sub-menu-side-desktop {
   width: 200px;
   background-color: #f2f2f2;
-  padding-block: 32px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -178,18 +201,11 @@ a,
   gap: 16px;
 }
 
-.sub-menu-desktop ul:first-child {
-  width: 400px;
-  background-color: #fff;
-  padding-block: 8px;
-  gap: 0;
-}
-
 .sub-menu-items {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 16px;
   padding: 16px;
   margin-inline: 22px;
@@ -209,12 +225,41 @@ a,
   background: rgba(114, 78, 145, 0.1);
 }
 
+.sub-menu-icon-pink {
+  background: rgba(229, 79, 109, 0.1);
+}
+
+.sub-menu-icon-lightGreen {
+  background: rgba(116, 196, 186, 0.1);
+}
+
+.sub-menu-icon-yellow {
+  background: rgba(248, 198, 48, 0.1);
+}
+
+.sub-menu-items:hover .sub-menu-icon-purple {
+  background: rgba(114, 78, 145, 0.2);
+}
+
+.sub-menu-items:hover .sub-menu-icon-pink {
+  background: rgba(229, 79, 109, 0.2);
+}
+
+.sub-menu-items:hover .sub-menu-icon-lightGreen {
+  background: rgba(116, 196, 186, 0.2);
+}
+
+.sub-menu-items:hover .sub-menu-icon-yellow {
+  background: rgba(248, 198, 48, 0.2);
+}
+
 .sub-menu-items p {
   font-size: 0.8rem;
   line-height: 1.2rem;
 }
 
-.sub-menu-items h3 {
+.sub-menu-items h3,
+.sub-menu-side-desktop h3 {
   font-size: 0.9rem;
   font-weight: normal;
   color: #000;

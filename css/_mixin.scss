@@ -1,0 +1,9 @@
+@mixin flex($alignVal, $justifyVal, $flexDir: row, $gapVal: 0) {
+    display: flex;
+    flex-direction: $flexDir;
+    align-items: $alignVal;
+    justify-content: $justifyVal;
+    @if $gapVal != 0 {
+      gap: $gapVal;
+    }
+  }

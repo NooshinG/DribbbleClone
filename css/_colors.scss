@@ -3,4 +3,11 @@ $gray: #727264;
 $LightGray: #f2f2f2;
 $black: #000;
 $pink: #ea4c89;
-$purple: rgb(114, 78, 145);
+
+//----- sub menu icons
+$explore: #724e91;
+$heart : #e54f6d;
+$box: #74c4ba;
+$blog: #f8c630;
+$subNavColors: $explore $heart $box $blog;
+$subNavColorNames: "purple" "pink" "lightGreen" "yellow";

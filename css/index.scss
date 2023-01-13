@@ -2,6 +2,7 @@ root {
   --arrow-image-up: url("../images/arrow-down.svg");
 }
 @import "colors";
+@import "mixin";
 
 * {
   box-sizing: border-box;
@@ -17,11 +18,15 @@ root {
   padding: 0;
 }
 
+.list-desktop > li {
+  padding-block: 30px;
+}
+
 .list-item {
   display: inline-block;
 }
 
-.list-item:hover{
+.list-item:hover {
   color: #000;
 }
 
