@@ -7,3 +7,10 @@
       gap: $gapVal;
     }
   }
+
+
+@mixin font($color,$size,$weight:normal)  {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
