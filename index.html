@@ -11,6 +11,14 @@
     <script src="script/index.js" defer></script>
   </head>
   <body>
+    <template id="artInfo">
+      <li>
+        <img src=""/>
+        <section>
+          <h3></h3>
+        </section>
+      </li>
+    </template>
     <header>
       <nav class="top-nav flex-space-between">
         <div class="nav-toggle only-mobile">
@@ -434,47 +442,51 @@
         </li>
       </ul>
     </header>
-    <main>
-      <section class="search-section">
-        <section>
-          <ul class="list tag-container">
-            <li class="top-tags">Discover</li>
-            <li class="top-tags">Animation</li>
-            <li class="top-tags">Branding</li>
-            <li class="top-tags">Illustration</li>
-            <li class="top-tags">Mobile</li>
-            <li class="top-tags">Print</li>
-            <li class="top-tags">Product Design</li>
-            <li class="top-tags">Typography</li>
-            <li class="top-tags">Web Design</li>
-          </ul>
-        </section>
-        <section class="desc-container">
-          <h1 class="desc-title">Explore the world’s leading design portfolios</h1>
-          <p class="desc">
-            Millions of designers and agencies around the world showcase their
-            portfolio work on Dribbble - the home to the world’s best design and
-            creative professionals.
-          </p>
-          
-        </section>
-        <section class="search">
-          <img src="./images/magnifier.svg" />
-          <input class="input-serach" type="text" placeholder="Search..." />
-        </section>
-        <section>
-          <ul class="list tag-container">
-            <li class="bottom-tags">Trending searches</li>
-            <li class="bottom-tags">landing page</li>
-            <li class="bottom-tags">ios</li>
-            <li class="bottom-tags">food</li>
-            <li class="bottom-tags">landingpage</li>
-            <li class="bottom-tags">uxdesign</li>
-            <li class="bottom-tags">Product Design</li>
-            <li class="bottom-tags">app design</li>
-          </ul>
-        </section>
+
+    <section class="search-section">
+      <section>
+        <ul class="list tag-container">
+          <li class="top-tags">Discover</li>
+          <li class="top-tags">Animation</li>
+          <li class="top-tags">Branding</li>
+          <li class="top-tags">Illustration</li>
+          <li class="top-tags">Mobile</li>
+          <li class="top-tags">Print</li>
+          <li class="top-tags">Product Design</li>
+          <li class="top-tags">Typography</li>
+          <li class="top-tags">Web Design</li>
+        </ul>
       </section>
+      <section class="desc-container">
+        <h1 class="desc-title">
+          Explore the world’s leading design portfolios
+        </h1>
+        <p class="desc">
+          Millions of designers and agencies around the world showcase their
+          portfolio work on Dribbble - the home to the world’s best design and
+          creative professionals.
+        </p>
+      </section>
+      <section class="search">
+        <img src="./images/magnifier.svg" />
+        <input class="input-serach" type="text" placeholder="Search..." />
+      </section>
+      <section>
+        <ul class="list tag-container">
+          <li class="bottom-tags">Trending searches</li>
+          <li class="bottom-tags">landing page</li>
+          <li class="bottom-tags">ios</li>
+          <li class="bottom-tags">food</li>
+          <li class="bottom-tags">landingpage</li>
+          <li class="bottom-tags">uxdesign</li>
+          <li class="bottom-tags">Product Design</li>
+          <li class="bottom-tags">app design</li>
+        </ul>
+      </section>
+    </section>
+    <main class="main">
+      <ul class="art-list list">       
+      </ul>
     </main>
   </body>
 </html>

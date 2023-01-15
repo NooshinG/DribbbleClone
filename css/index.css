@@ -357,6 +357,27 @@ a,
     height: 560px;
   }
 }
+.main {
+  width: 100%;
+  padding: 50px;
+}
+
+.art-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 32px;
+}
+.art-list * {
+  width: 100%;
+}
+.art-list img {
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+.art-list li {
+  cursor: pointer;
+}
+
 @media (min-width: 920px) {
   .only-mobile {
     display: none;

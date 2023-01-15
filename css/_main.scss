@@ -1,0 +1,22 @@
+.main {
+  width: 100%;
+  padding: 50px;
+}
+
+.art-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 32px;
+  
+  & * {
+    width: 100%;
+  }
+  & img {
+    aspect-ratio: 1;
+    border-radius: 8px;
+  }
+
+  & li {
+    cursor: pointer;
+  }
+}
