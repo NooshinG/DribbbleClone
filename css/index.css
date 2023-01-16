@@ -367,15 +367,43 @@ a,
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   gap: 32px;
 }
-.art-list * {
+.art-list li,
+.art-list img,
+.art-list section {
   width: 100%;
+}
+.art-list li section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .art-list img {
   aspect-ratio: 1;
   border-radius: 8px;
 }
-.art-list li {
+.art-list img:hover {
   cursor: pointer;
+}
+.art-list h3,
+.art-list div {
+  display: inline;
+}
+.art-list h3 {
+  max-width: 50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.art-list div svg {
+  width: 16px;
+  color: #f2f2f2;
+}
+.art-list div svg:nth-child(1):hover {
+  cursor: pointer;
+}
+.art-list div svg:nth-child(1):hover path {
+  fill: #ea4c89;
 }
 
 @media (min-width: 920px) {

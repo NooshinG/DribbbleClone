@@ -6,16 +6,19 @@ const artTemplate = document.getElementById("artInfo");
 
 
 let artData;
-fetch("https://api.artic.edu/api/v1/artworks?page=2&limit=22")
+fetch("https://api.artic.edu/api/v1/artworks?page=1&limit=9")
   .then((response) => response.json())
   .then((data) => {
     artData = data.data;
-    // console.log(artData);
+    // console.log(artData[1]);
     artData.forEach((element) => {
-      // console.log(element);
       const artBody = document.importNode(artTemplate.content, true);
+      // console.log(artBody.querySelectorAll('div span').firstElementChild);
       artBody.querySelector('img').src=`https://www.artic.edu/iiif/2/${element.image_id}/full/843,/0/default.jpg`;
       artBody.querySelector('h3').textContent = element.artist_title;
+      const artSpan = artBody.querySelectorAll('div span');
+      artSpan[0].textContent = (Math.floor(Math.random() * 100)).toString();
+      artSpan[1].textContent = (Math.floor(Math.random() * (1000 - 100) + 100) / 100).toString() + 'k';
       artList.append(artBody);
     });
   })

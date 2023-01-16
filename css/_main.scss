@@ -7,16 +7,47 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   gap: 32px;
-  
-  & * {
+
+  & li,
+  img,
+  section {
     width: 100%;
   }
+
+  & li section {
+    @include flex(center, space-between);
+  }
+
   & img {
     aspect-ratio: 1;
     border-radius: 8px;
   }
 
-  & li {
+  & img:hover {
     cursor: pointer;
+  }
+
+  & h3,
+  div {
+    display: inline;
+  }
+
+  & h3 {
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  & div svg {
+    width: 16px;
+    color: $LightGray;
+  }
+
+  & div svg:nth-child(1):hover {
+    cursor: pointer;
+    & path {
+      fill: $pink;
+    }
   }
 }
