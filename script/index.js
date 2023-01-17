@@ -2,7 +2,7 @@ const mobileNav = document.querySelector(".nav-container-mobile");
 const burger = document.querySelector(".nav-toggle");
 const burgerImg = burger.querySelector("img");
 const artList = document.querySelector(".art-list");
-const artTemplate = document.getElementById("artInfo");
+const artTemplate = document.getElementById("art-info");
 
 
 let artData;
@@ -10,15 +10,15 @@ fetch("https://api.artic.edu/api/v1/artworks?page=1&limit=9")
   .then((response) => response.json())
   .then((data) => {
     artData = data.data;
-    // console.log(artData[1]);
+    // console.log(artData[2]);
+    // console.log(artData[3]);
     artData.forEach((element) => {
       const artBody = document.importNode(artTemplate.content, true);
-      // console.log(artBody.querySelectorAll('div span').firstElementChild);
       artBody.querySelector('img').src=`https://www.artic.edu/iiif/2/${element.image_id}/full/843,/0/default.jpg`;
-      artBody.querySelector('h3').textContent = element.artist_title;
-      const artSpan = artBody.querySelectorAll('div span');
-      artSpan[0].textContent = (Math.floor(Math.random() * 100)).toString();
-      artSpan[1].textContent = (Math.floor(Math.random() * (1000 - 100) + 100) / 100).toString() + 'k';
+      artBody.querySelector('.artist').textContent = element.artist_title;
+      artBody.querySelector('.img-desc').textContent = element.title;
+      artBody.querySelector('.likes').textContent = (Math.floor(Math.random() * 100)).toString();
+      artBody.querySelector('.views').textContent = (Math.floor(Math.random() * (1000 - 100) + 100) / 100).toString() + 'k';
       artList.append(artBody);
     });
   })
@@ -30,7 +30,6 @@ const mobileNavHandler = (e) => {
     return;
   }
   navItem.nextElementSibling.classList.toggle("hidden");
-  // console.log(navItem.getAttribute("data-showList"));
   if (navItem.getAttribute("data-showList") === "0") {
     navItem.style.setProperty(
       "--arrow-image-up",

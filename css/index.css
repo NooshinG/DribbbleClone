@@ -269,11 +269,19 @@ a,
   width: 100%;
   height: 650px;
   padding: 50px 20px;
-  background-color: #ea4c89;
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.video {
+  width: 100%;
+  height: 650px;
+  object-fit: fill;
+  position: absolute;
+  z-index: -1;
 }
 
 .tag-container {
@@ -353,7 +361,7 @@ a,
 }
 
 @media (min-width: 920px) {
-  .search-section {
+  .search-section, .video {
     height: 560px;
   }
 }
@@ -372,38 +380,75 @@ a,
 .art-list section {
   width: 100%;
 }
-.art-list li section {
+.art-list img {
+  aspect-ratio: 1;
+  border-radius: 16px;
+}
+.art-list div {
+  display: inline;
+}
+.art-list .art-information {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-.art-list img {
-  aspect-ratio: 1;
-  border-radius: 8px;
+
+.img-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
 }
-.art-list img:hover {
+
+.img-container:hover {
   cursor: pointer;
 }
-.art-list h3,
-.art-list div {
-  display: inline;
+.img-container:hover .img-desc {
+  visibility: visible;
+  opacity: 1;
 }
-.art-list h3 {
+
+.artist {
+  display: inline;
   max-width: 50%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.art-list div svg {
+
+.like-svg,
+.view-svg {
   width: 16px;
   color: #f2f2f2;
 }
-.art-list div svg:nth-child(1):hover {
+
+.like-svg:hover {
   cursor: pointer;
 }
-.art-list div svg:nth-child(1):hover path {
+.like-svg:hover path {
   fill: #ea4c89;
+}
+
+.img-desc {
+  width: 100%;
+  height: 50%;
+  padding: 32px 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  z-index: 10;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 @media (min-width: 920px) {
