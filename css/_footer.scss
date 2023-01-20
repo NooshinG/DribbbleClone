@@ -1,0 +1,102 @@
+.footer {
+  width: 100%;
+  background-color: rgba($LightGray, 0.5);
+  padding: 50px 24px;
+}
+
+.footer-links-container {
+  @include flex(flex-start, flex-start);
+  flex-wrap: wrap;
+}
+
+.dribbble-info {
+  width: 100%;
+  padding: 16px;
+  // border: 1px solid red;
+  @include flex(flex-start, center, column, 16px);
+}
+
+.footer-logo {
+  width: 100px;
+  & path {
+    color: $pink;
+  }
+}
+
+.socialMedia {
+  @include flex(flex-start, center, row, 16px);
+
+  & svg {
+    width: 18px;
+    height: 18px;
+  }
+  & svg path {
+    color: $gray;
+  }
+  & a:hover svg path {
+    color: $black;
+  }
+}
+
+.footer-desc {
+  width: 200px;
+  display: contents;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  width: calc(100% / 2);
+  padding: 16px;
+  // border: 1px solid red;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+  @include flex(flex-start, center, column, 16px);
+
+  & li,
+  a {
+    font-size: 0.9rem;
+  }
+
+  & .footer-links-header,
+  li:hover a {
+    color: $black;
+  }
+}
+
+.footer-rights {
+  @include flex(center, center, column, 8px);
+}
+
+.footer-shots {
+  @include flex(center, center, column-reverse, 8px);
+  & img {
+    margin-inline: 8px;
+    width: 24px;
+    aspect-ratio: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    width: calc(100% / 5);
+  }
+}
+
+@media (min-width: 1160px) {
+  .dribbble-info,
+  .footer-links {
+    width: calc(100% / 6);
+  }
+
+  .footer-rights {
+    @include flex(center, space-between, row);
+  }
+
+  .footer-shots {
+    @include flex(center, center, row, 8px);
+  }
+}

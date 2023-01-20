@@ -63,9 +63,18 @@ a,
   color: #fff;
 }
 
+.line {
+  display: block;
+  height: 1px;
+  margin-block: 50px;
+  background-color: rgba($gray, 0.2);
+  border-radius: 8px;
+}
+
 @import "topNav";
 @import "searchSection";
 @import "main";
+@import "footer";
 
 @media (min-width: 920px) {
   .only-mobile {

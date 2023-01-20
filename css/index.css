@@ -61,6 +61,14 @@ a,
   color: #fff;
 }
 
+.line {
+  display: block;
+  height: 1px;
+  margin-block: 50px;
+  background-color: rgba(114, 114, 100, 0.2);
+  border-radius: 8px;
+}
+
 .empty,
 .top-nav {
   width: 100%;
@@ -95,12 +103,8 @@ a,
   width: 76px;
   height: 30px;
 }
-
-.logo a,
-.logo img,
-.nav-toggle a {
-  width: 100%;
-  height: 100%;
+.logo path {
+  color: #000;
 }
 
 .nav-items {
@@ -451,6 +455,130 @@ a,
   transition: 0.5s;
 }
 
+.footer {
+  width: 100%;
+  background-color: rgba(242, 242, 242, 0.5);
+  padding: 50px 24px;
+}
+
+.footer-links-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.dribbble-info {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-logo {
+  width: 100px;
+}
+.footer-logo path {
+  color: #ea4c89;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}
+.socialMedia svg {
+  width: 18px;
+  height: 18px;
+}
+.socialMedia svg path {
+  color: #727264;
+}
+.socialMedia a:hover svg path {
+  color: #000;
+}
+
+.footer-desc {
+  width: 200px;
+  display: contents;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  width: 50%;
+  padding: 16px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-links-list li,
+.footer-links-list a {
+  font-size: 0.9rem;
+}
+.footer-links-list .footer-links-header,
+.footer-links-list li:hover a {
+  color: #000;
+}
+
+.footer-rights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-shots {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.footer-shots img {
+  margin-inline: 8px;
+  width: 24px;
+  aspect-ratio: 1;
+}
+
+@media (min-width: 768px) {
+  .footer-links {
+    width: 20%;
+  }
+}
+@media (min-width: 1160px) {
+  .dribbble-info,
+.footer-links {
+    width: 16.6666666667%;
+  }
+  .footer-rights {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-shots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+}
 @media (min-width: 920px) {
   .only-mobile {
     display: none;
