@@ -74,7 +74,12 @@ a,
 @import "topNav";
 @import "searchSection";
 @import "main";
+@import "loading";
 @import "footer";
+
+.hidden {
+  display: none;
+}
 
 @media (min-width: 920px) {
   .only-mobile {

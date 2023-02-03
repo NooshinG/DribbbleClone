@@ -1,0 +1,56 @@
+
+.loading-container {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading-outer,
+  .loading-inner {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .loading-outer {
+    width: 100px;
+    z-index: -1;
+    border-top: 2px solid $pink;
+    animation: loadingOuter 2s linear infinite;
+  }
+  
+  .loading-inner {
+    width: 90px;
+    z-index: -2;
+    border-bottom: 2px solid $pink;
+    animation: loadingInner 2s linear infinite;
+  }
+  
+  .loading-text {
+    font-size: 1rem;
+    color: $pink;
+    font-weight: bold;
+  }
+  
+  @keyframes loadingOuter {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes loadingInner {
+      0% {
+        transform: rotate(0);
+      }
+    
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
