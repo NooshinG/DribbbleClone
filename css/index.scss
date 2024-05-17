@@ -71,6 +71,31 @@ a,
   border-radius: 8px;
 }
 
+.moreBtn__container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.moreBtn {
+  // margin-inline: auto;
+  padding: 10px;
+  border: 1px solid $pink;
+  background: $pink;
+  border-radius: 5px;
+  color: $white;
+
+  &:disabled {
+    border: 1px solid $gray;
+    background: $white;
+    color: $gray;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @import "topNav";
 @import "searchSection";
 @import "main";

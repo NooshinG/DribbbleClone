@@ -69,6 +69,28 @@ a,
   border-radius: 8px;
 }
 
+.moreBtn__container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.moreBtn {
+  padding: 10px;
+  border: 1px solid #ea4c89;
+  background: #ea4c89;
+  border-radius: 5px;
+  color: #fff;
+}
+.moreBtn:disabled {
+  border: 1px solid #727264;
+  background: #fff;
+  color: #727264;
+}
+.moreBtn:hover {
+  cursor: pointer;
+}
+
 .empty,
 .top-nav {
   width: 100%;

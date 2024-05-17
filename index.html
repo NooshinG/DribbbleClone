@@ -14,7 +14,7 @@
     <template id="art-info">
       <li>
         <section class="img-container">
-          <img src="" />
+          <img src="" loading="lazy"/>
           <p class="img-desc"></p>
         </section>
         <section class="art-information">
@@ -539,7 +539,7 @@
         </ul>
       </section>
     </section>    
-    <main class="main hidden">
+    <main class="main">
       <ul class="art-list list"></ul>
     </main>
     <section class="loading-container">
@@ -547,6 +547,9 @@
       <div class="loading-inner"></div>
       <p class="loading-text">Loading...</p>
     </section>
+    <div class="moreBtn__container">
+      <button id="load-more-data" class="moreBtn">Load More ArtWork</button>
+    </div>
     <footer class="footer">
       <section class="footer-links-container">
         <section class="dribbble-info">
