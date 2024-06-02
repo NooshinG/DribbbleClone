@@ -1,41 +1,35 @@
+import { closeModalHandler, openModalHandler } from "./modal.js";
+import { fetchData } from "./fetchData.js";
+
 const mobileNav = document.querySelector(".nav-container-mobile");
 const burger = document.querySelector(".nav-toggle");
 const burgerImg = burger.querySelector("img");
 const artList = document.querySelector(".art-list");
 const artTemplate = document.getElementById("art-info");
 const loading = document.querySelector(".loading-container");
-const main = document.querySelector(".main");
+// const main = document.querySelector(".main");
 const loadMoreData = document.getElementById("load-more-data");
-let pageNumber = 1;
+const artworkModal = document.getElementById("artwork-modal");
+const modalContentContainer = document.querySelector('.modal-content__container')
+const closeModal = document.querySelector(".close-modal");
 
-const fetchData = (page) => {
-  return fetch(`https://api.artic.edu/api/v1/artworks?page=${page}&limit=12`)
-    .then((response) => {
-      if (response.status >= 200 && response.status < 300) {
-        return response.json();
-      } else {
-        return response.json.then((errData) => {
-          console.log(errData);
-          throw new Error("Something went Wrong - server-side.");
-        });
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-      throw new Error("Something went wrong!");
-    });
-};
+let pageNumber = 1;
 
 async function fetchArtWorks() {
   try {
     loadMoreData.disabled = true;
     loadMoreData.textContent = "Loading...";
+
     const responseData = await fetchData(pageNumber + 1);
     const listOfArtworks = responseData.data;
+
     loading.classList.add("hidden");
+
     pageNumber = pageNumber + 1;
+
     listOfArtworks.forEach((element) => {
       const artBody = document.importNode(artTemplate.content, true);
+      artBody.querySelector("li").id = element.id;
       artBody.querySelector(
         "img"
       ).src = `https://www.artic.edu/iiif/2/${element.image_id}/full/843,/0/default.jpg`;
@@ -92,3 +86,10 @@ fetchArtWorks();
 mobileNav.addEventListener("click", mobileNavHandler);
 burger.addEventListener("click", burgerMenuHandler);
 loadMoreData.addEventListener("click", fetchArtWorks);
+closeModal.addEventListener(
+  "click",
+  closeModalHandler.bind(null, artworkModal)
+);
+artList.addEventListener("click", (event) => {
+  openModalHandler(event, artworkModal,modalContentContainer);
+});

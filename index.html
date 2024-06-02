@@ -8,13 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="script/index.js" defer></script>
+    <script src="script/index.js" defer type="module"></script>
   </head>
   <body>
     <template id="art-info">
       <li>
         <section class="img-container">
-          <img src="" loading="lazy"/>
+          <img src="" loading="lazy" />
           <p class="img-desc"></p>
         </section>
         <section class="art-information">
@@ -52,6 +52,26 @@
         </section>
       </li>
     </template>
+    <section id="artwork-modal" class="modal hidden">
+      <div class="close-modal__container">
+        <button class="close-modal">
+          <svg
+            width="32px"
+            height="32px"
+            viewBox="0 0 22 22"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>70 Basic icons by Xicons.co</title>
+            <path
+              d="M7.22876 5.81455C6.83824 5.42403 6.20507 5.42403 5.81455 5.81455C5.42402 6.20507 5.42402 6.83824 5.81455 7.22876L9.58578 11L5.81455 14.7712C5.42402 15.1618 5.42402 15.7949 5.81455 16.1854C6.20507 16.576 6.83824 16.576 7.22876 16.1854L11 12.4142L14.7712 16.1854C15.1618 16.576 15.7949 16.576 16.1854 16.1854C16.576 15.7949 16.576 15.1618 16.1854 14.7712L12.4142 11L16.1854 7.22876C16.576 6.83824 16.576 6.20507 16.1854 5.81455C15.7949 5.42403 15.1618 5.42403 14.7712 5.81455L11 9.58579L7.22876 5.81455Z"
+              fill="#6f7380"
+            />
+          </svg>
+        </button>
+      </div>
+      <article class="modal-content__container"></article>
+    </section>
+    
     <header>
       <nav class="top-nav flex-space-between">
         <div class="nav-toggle only-mobile">
@@ -538,7 +558,7 @@
           <li class="bottom-tags">app design</li>
         </ul>
       </section>
-    </section>    
+    </section>
     <main class="main">
       <ul class="art-list list"></ul>
     </main>
